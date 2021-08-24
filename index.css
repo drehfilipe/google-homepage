@@ -10,10 +10,12 @@
   --light-gray-1: #f8f9fa;
   --light-gray-2: #e4e6e8;
   --light-gray-3: #f2f2f2;
+  --light-gray-4: #f8f9fa;
   --dark-gray-1: #a7aaad;
   --dark-gray-2: #828385;
   --dark-gray-3: #6f7073;
   --dark-gray-4: #57585b;
+  --dark-gray-5: #202124;
 }
 
 /* NAVBAR */
@@ -45,11 +47,16 @@
 #navbar i:hover {
   background-color: var(--light-gray-3);
   border-radius: 50px;
+  cursor: pointer;
 }
 
 #navbar img {
   max-width: 35px;
   border-radius: 50px;
+}
+
+#navbar img {
+  cursor: pointer;
 }
 
 #navbar a {
@@ -76,20 +83,32 @@
   margin-bottom: 30px;
 }
 
+form {
+  display: block;
+  width: auto;
+  max-width: 100vw;
+}
+
 #search-box {
-  width: 100vw;
+  margin: 20px;
   display: flex;
-  justify-content: center;
-  flex-direction: row nowrap;
-  margin-bottom: 30px;
+  background: transparent;
+  outline: none;
+  border-radius: 50px;
+  margin-bottom: 17px;
+}
+
+#search-box:hover {
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
 }
 
 #search-box input {
   padding: 13px;
-  background: transparent;
-  outline: none;
   padding-left: 50px;
   padding-right: 50px;
+  background: transparent;
+  outline: none;
   border-radius: 50px;
   border-style: solid;
   border-color: var(--light-gray-2);
@@ -97,12 +116,8 @@
   width: 600px;
 }
 
-#search-box input:hover {
-  background-color: #fff;
-  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
-}
-
 #search-icon {
+  margin-left: -20px;
   position: relative;
   left: 35px;
   align-self: center;
@@ -111,6 +126,7 @@
 }
 
 #mic-icon {
+  margin-right: -24px;
   right: 35px;
   position: relative;
   align-self: center;
@@ -118,16 +134,31 @@
   color: var(--dark-gray-1);
 }
 
+#mic-icon:hover {
+  cursor: pointer;
+}
+
 /* BUTTONS */
+#buttons {
+  display: flex;
+  justify-content: center;
+}
 
 #buttons button {
+  border-radius: 4px;
+  cursor: pointer;
   padding: 10px 20px 10px 20px;
-  color: var(--dark-gray-4);
-  margin: 0px 6px 0px 6px;
+  background: var(--light-gray-4);
+  color: var(--dark-gray-5);
+  margin: 11px 6px;
   font-size: 14px;
   text-transform: capitalize;
   border-style: none;
   background-color: var(--light-gray-1);
+}
+
+#buttons button:hover {
+  box-shadow: 0px 0px 1px 1px rgb(0 0 0 / 10%);
 }
 
 /* FOOTER */
@@ -168,4 +199,9 @@ footer {
   text-decoration: none;
   font-size: 14px;
   color: var(--dark-gray-3);
+}
+
+#footer-first-list a:hover,
+#footer-second-list a:hover {
+  text-decoration: underline;
 }
